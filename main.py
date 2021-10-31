@@ -1,8 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-import matplotlib
-import sklearn
+
 
 df = pd.read_excel('teste_1.xlsx')
 matrix = df[['primario', 'secundario','terciario']]
@@ -20,4 +19,4 @@ matrix_identidade = np.identity(3)
 
 matrix_i_menos_A = matrix_identidade - matrix_coef_tecnico
 leontief = np.linalg.inv(matrix_i_menos_A)
-
+leontief_2 = leontief
